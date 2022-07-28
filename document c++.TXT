@@ -1,0 +1,134 @@
+///////.h
+#include<string>
+#include<iostream>
+using namespace std;
+//////////////////////////////////////ex1
+/// etudiant.h
+class Etudiant
+{
+public:
+    string nom;
+    string prenom;
+    float tab_notes[10]={0};
+
+    void saisir();
+    void afficher();
+    float moyenne();
+    bool admis();
+    int exae_quo(Etudiant A );
+};
+
+////////////.cpp
+#include .h
+
+void Etudiant::saisir()
+{
+    cout<<"nom:? \n";
+    cin>>nom;
+    cout<<"prenom:? \n";
+    cin>>prenom;                       ///////ajouter
+    cout<<"saisir les notes \n";
+    for(int i=0;i<10;i++)
+        cin>>tab_notes[i];
+}
+
+
+void Etudiant::afficher()
+{
+ cout<<"nom:"<<nom<<endl;
+ cout<<"prenom:"<<prenom<<endl;
+ cout<<"note:\n";                    //////afficher
+ for(int i=0;i<10;i++)
+        cout<<tab_notes[i]<<" ";
+cout<<endl;
+}
+
+////////main.cpp
+
+#include <iostream>
+#include<string>
+#include"Etudiant.h"
+
+using namespace std;
+
+int main()
+{
+  Etudiant etd1,etd2;
+  etd1.saisir();etd2.saisir();
+  etd1.afficher();etd2.afficher();
+  if(etd1.admis())
+    cout<<"mabrouk\n";
+  else
+    cout<<":(\n";
+  if(etd1.exae_quo(etd2)==0)
+    cout<<"egale";
+  else if(etd1.exae_quo(etd2)==1)
+    cout<<"le deuxieme est mieux";
+  else
+    cout<<"le premier est plus fort";
+}
+
+/////////////////////////////////////ex2 banc
+
+                             ////compte.h
+#ifndef COMPTE_H
+#define COMPTE_H
+#include<iostream>
+#include<string>
+using namespace std;
+
+class compte
+{
+    public:
+
+        void saisir();
+        void afficher();
+        bool retirer_argent(double);
+        double depose_argent(double);
+        void consulter_solde();
+        void transfer_argent(compte &,double);
+
+        double get_solde(){return solde;}
+         void set_solde(double s){solde=s;}
+         string get_numprop(){return nompropritere;}
+         long get_numcompte(){return numcpt;}
+
+
+         //Constructeur par defaut
+        compte();
+        //Constructeur param�tr�
+        compte(long,double,string);
+        virtual ~compte(){};
+
+    protected:
+
+
+    private:
+        string nompropritere;
+        long numcpt;
+        double solde;
+};  
+
+#endif // COMPTE_H
+//////////////////////////////banque.cpp
+              #include "banque.h"
+int banque::recherche(long rib,int n){
+for (int i=0;i<n;i++)
+{
+    if(rib==tab[i].get_numcompte())
+        return i;
+
+}
+
+    return -1;
+
+
+}
+void banque::ajout_compte(compte c,int *n){
+    if(recherche(c.get_numcompte(),*n)==-1)
+{tab[*n].saisir();
+*n++;}
+else
+    cout<<"compte existe d�ja"<<endl;
+
+}

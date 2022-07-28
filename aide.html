@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="fichiercss.css">
+        <script src="op.js"></script>
+        <title>Besoin d`aide </title>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.jpg" class="logo1" height="60">
+            <a href="opticien.html" class="logo">Accueil</a>
+            <nav class="nav" >
+                <a href="lunettessol.html" class="nav11">lunettes de soleil</a> 
+                <a href="lunette de vue.html" class="nav22">lunettes de vue</a>
+                <a href="formulaire.html" class="nav33">se connecter</a>
+                <a href="aide.html" class="nav44">Besoin d'aide!</a>
+            </nav>
+        </header>
+        <section class="main04">
+            <h2>Besoin d'aide? notre service client est à votre écoute</h2><br><br><br>
+            <table  width="1000px">
+                <tr>
+                    <th><img src="images/pp.jpg" height="90px" width="90px"></th>
+                    <th><img src="images/ll.jpg" height="50px" width="90px"></th>
+                    <th><img src="images/s.jpg" height="90px" width="90px"></th>
+                </tr>
+                <tr>
+                    <td><h1>Commandes</h1></td>
+                    <td><h1>Dossiers optiques</h1></td>
+                    <td><h1>Presse & partenariats</h1></td>
+                </tr>
+                <tr>
+                    <td><p>Notre responsable du stock gère le suivi de vos commandes et reste à votre écoute pour les questions liées aux échanges et aux retours.</p></td>
+                    <td><p>Notre opticienne vous conseille sur le choix de votre équipement optique ainsi que sur les démarches auprès des mutuelles.</p></td>
+                    <td><p>Notre chargée de communication est à l'affut des dernières tendances qu'elle partage avec vous sur les réseaux sociaux.</p></td>
+                </tr>
+            </table>
+        </section>
+        <section class="main14">
+            <h5>Si vous souhaitez être accompagné dans votre démarche, n'hésitez pas à nous contacter au 24410946 ou à formuler votre demande via le formulaire disponible ci-dessous.Notre équipe prendra contact avec vous dans les plus brefs délais.</h5>
+            <br> 
+            <form id="baideform">
+                <b>demande concerne :</b> 
+                <br>
+                <select class="fl" id="cat">
+                    <option value="rp">des lunettes a réparer</option>
+                    <option value="dp">disponibilité d'un produit</option>
+                    <option value="qp">question sur un produit</option>
+                    <option value="autreq">un autre question</option>
+                </select><br><p id="errorCAT" class="error"></p>
+                <b>Votre prenom:</b><br>
+                <label for="prenom"  ></label>
+                <input type="prenom"  name="prenomR" class="fl"  ><br>
+                <p id="errorPR" class="error"></p>
+                <b>Votre nom:</b><br>
+                <label for="nom"  ></label>
+                <input type="nom"  name="nomR" class="fl"><br>
+                <p id="errorNR" class="error"></p>
+                <b>Votre e-mail:</b><br>
+                <label for="email"></label>
+                <input type="email"name="mail" class="fl" placeholder="exemple@gmail.com"><br>
+                <p id="errorMR" class="error"></p>
+                <b>Message:</b><br>
+                <label for="msg" ></label>
+                <textarea name="msg"   cols="150" rows="7" class="fl"></textarea>
+                <button type="button" class="bbb" id="button3" onclick="verif()">Envoyer</button>
+            </form>
+            
+        </section>
+        </section>
+        <footer class="footer">
+            <div>
+                <p><b>A propos de nous</b></p>
+                <p class="fp">votre opticien en ligne Infinioptic</p>
+                <p class="fp">est un magasin en ligne de vente des</p>
+                <p class="fp"> lunettes (indépendant depuis 2022).</p>
+                <p class="fp">Basée en Tunisie, notre équipe est </p>
+                <p class="fp">composée de spécialistes de l'optique.</p>
+            </div>
+            <div>
+                <b>Liens importants</b><br>
+                <a href="opticien.html" >Accueil</a><br>
+                <a href="lunettessol.html" >lunettes de soleil</a><br>
+                <a href="lunette de vue.html" >lunettes de vue</a><br>
+                <a href="formulaire.html" >se connecter</a><br>
+                <a href="aide.html" >Besoin d'aide</a><br><br><br>
+                <p class="copi"> Copyrights @ <span>Anes El fad/Saif Zribi</span></p>
+            </div>
+            <div>
+                <p> <b>contactez-nous</b></p>
+                <p>Telephone</p>
+                <ul>
+                    <li>+21624410946</li>
+                    <li>+21658828255</li>
+                </ul>
+                <p>réseaux sociaux</p>
+                <p class="social-icons">
+                    <a href="https://www.facebook.com/saif.zribi.99"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/saifzribi/?hl=fr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/saif-zribi-44904b221/"><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+            <div>
+                <img src="images/logo.jpg"  height="200">
+            </div>
+        </footer>  
+    </body>
+</html>

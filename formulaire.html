@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>authentification</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="fichiercss.css">
+        <script src="op.js"></script>
+    </head>
+    <body background="images/fb.jpg" >
+        <header>
+            <img src="images/logo.jpg" class="logo1" height="60">
+            <a href="opticien.html" class="logo">Accueil</a>
+            <nav class="nav" >
+                <a href="lunettessol.html" class="nav11">lunettes de soleil</a> 
+                <a href="lunette de vue.html" class="nav22">lunettes de vue</a>
+                <a href="formulaire.html" class="nav33">se connecter</a>
+                <a href="aide.html" class="nav44">Besoin d'aide!</a>
+            </nav>
+        </header>
+        <section class="main11">
+            <form id="form1" name="form1" action="" method="post">
+                <table width="1200px">
+                    <tr>
+                        <th >Se connecter</th>
+                        <th >Nouveau client?</th>
+                    </tr><br>
+                    <tr>
+                        <td rowspan="2" class="bb">
+                                <label for="email"></label>
+                                <input type="email" placeholder="exemple@gmail.com" id="e1"name="email" class="fs">
+                                <p id="email1" class="pf"></p>
+                        </td> 
+                        <td>
+                            créer votre compte et bénéficiez de nombreux avantages:
+                        </td>  
+                    </tr><br>
+                    <td>
+                            Bénéficiez d'offres exclusives
+                    </td>
+                    
+                    </tr><br>
+                    <tr>
+                        <td rowspan="2" class="bb">
+                            <label for="password"></label>
+                            <input type="password" placeholder="Mot de passe" id="mp1" name="mdp" class="fs">
+                            <p id="pwd1" class="pf"></p>
+                    </td>
+                        <td>
+                            Suivez toutes vos commandes
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                            Gagnez du temps pour vos prochains achats
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                            <button type="button" onclick="verif1()" class="main-btn22" id="button1"  >Se connecter</button>
+                        </td>
+                        <td>
+                            <a href="#cc" class="main-btn">créer un compte</a>
+                        </td>
+                    </tr><br><br><br><br>
+                </table>
+            </form>
+        </section>  
+        <section class="cc" id="cc">
+            <form id="form2" name="form2" action="" method="post">
+                <table width="1000px">
+                    <tr>
+                        <th>Vos informations personnelles</th>
+                        <th>Votre adresse</th> 
+                    </tr>
+                    <tr>
+                        <td>
+                                <label>
+                                    <input type="radio" name="genre" value="H" class="r">Homme
+                                </label>
+                                <label>
+                                    <input type="radio" name="genre" value="F" class="r" >Femme
+                                </label>
+                                <p id="rad" class="pf"></p>
+                        </td>
+                        <td>
+                                <b>ville:</b><br>
+                                <select class="fs3" id="selc">
+                                    <option value="ar">Ariana</option>
+                                    <option value="bj">Beja</option>
+                                    <option value="ba">ben arous</option>
+                                    <option value="bi">Bizerte</option>
+                                    <option value="GA">gabes</option>
+                                    <option value="gaf">gafsa</option>
+                                    <option value="jen">jendouba</option>
+                                    <option value="kai">kairouan</option>
+                                    <option value="kass">kasserine</option>
+                                    <option value="keb">kebili</option>
+                                    <option value="lk">le kef</option>
+                                    <option value="ma">mahdia</option>
+                                    <option value="man">manouba</option>
+                                    <option value="med">medenine</option>
+                                    <option value="mon">monastir</option>
+                                    <option value="na">nabeul</option>
+                                    <option value="sf">sfax</option>
+                                    <option value="sib">sidi bou said</option>
+                                    <option value="sil">siliana</option>
+                                    <option value="sou">sousse</option>
+                                    <option value="tat">tataouin</option>
+                                    <option value="toz">tozeur</option>
+                                    <option value="tun">tunis</option>
+                                    <option value="zag">zaghouan</option>
+                                </select>
+                                <p id="selec" class="pf"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <label for="prenom" ></label>
+                                <input type="text" placeholder="prenom"id="pren" name="prenom" class="fs2" >
+                                <p id="pn1" class="pf"></p>
+                        </td>
+                        <td>
+                                <label for="adresse"></label>
+                                <input type="text" placeholder="Adresse"id="adr1" name="adresse" class="fs3">
+                                <p id="ad1" class="pf"></p>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                                <label for="password"></label>
+                                <input type="password" placeholder="Mot de passe"id="mdp2" name="mdp" class="fs2">
+                                <p id="mdp22" class="pf"></p>
+                        </td>
+                        <td>
+                                <label for="adresse"></label>
+                                <input type="text" placeholder="Adresse line 2" name="adresse" class="fs3">
+                                <p id="ad2" class="pf"></p>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                                <label for="naissance"></label>
+                                <input type="date" id="date" placeholder="jj\mm\aa" name="date"  class="fs2">
+                                <p id="dat" class="pf"></p>
+                        </td>
+                        <td>
+                                <label for="code postal"></label>
+                                <input type="text" placeholder="Zip/code postal" name="Zip" class="fs3">
+                                <p id="cp" class="pf"></p>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                                <label for="email"></label>
+                                <input type="email" placeholder="e-mail" id="e2" name="el2" class="fs2">
+                                <p id="email2" class="pf"></p>
+                        </td>
+                        <td>
+                                <label for="societe"></label>
+                                <input type="text" placeholder="société" name="soc" class="fs3">
+                                <p id="soc" class="pf"></p>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                                <label for="tlf"></label>
+                                <input type="text" placeholder="numero de telephone" name="tlf" class="fs2">
+                                <p id="tlf" class="pf"></p>
+                        </td>
+                        <td rowspan="2">
+                                <label for="info"></label>
+                                <textarea name="info" id="info" placeholder="information complementaire"class="fs3" cols="23.5" rows="5"></textarea>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td>
+                                <label>
+                                    <input type="checkbox" name="verif" value="verif" >j'accepte les termes et conditions et la politique de confidentialité
+                                </label>
+                                <p id="check" class="pf"></p>
+                        </td>
+                    </tr><br>
+                </table><br>
+                <button type="button" class="bbb" id="button2" onclick=" verif2()">Envoyer</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <div>
+                <p><b>A propos de nous</b></p>
+                <p class="fp">votre opticien en ligne Infinioptic</p>
+                <p class="fp">est un magasin en ligne de vente des</p>
+                <p class="fp"> lunettes (indépendant depuis 2022).</p>
+                <p class="fp">Basée en Tunisie, notre équipe est </p>
+                <p class="fp">composée de spécialistes de l'optique.</p>
+            </div>
+            <div>
+                <b>Liens importants</b><br>
+                <a href="opticien.html" >Accueil</a><br>
+                <a href="lunettessol.html" >lunettes de soleil</a><br>
+                <a href="lunette de vue.html" >lunettes de vue</a><br>
+                <a href="formulaire.html" >se connecter</a><br>
+                <a href="aide.html" >Besoin d'aide</a><br><br><br>
+                <p class="copi"> Copyrights @ <span>Anes El fad/Saif Zribi</span></p>
+            </div>
+            <div>
+                <p> <b>contactez-nous</b></p>
+                <p>Telephone</p>
+                <ul>
+                    <li>+21624410946</li>
+                    <li>+21658828255</li>
+                </ul>
+                <p>réseaux sociaux</p>
+                <p class="social-icons">
+                    <a href="https://www.facebook.com/saif.zribi.99"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/saifzribi/?hl=fr"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/saif-zribi-44904b221/"><i class="fab fa-linkedin"></i></a>
+                </p>
+            </div>
+            <div>
+                <img src="images/logo.jpg"  height="200">
+            </div>
+        </footer>  
+    </body>
+</html>
